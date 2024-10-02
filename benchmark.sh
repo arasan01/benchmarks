@@ -1,4 +1,4 @@
-IP=`docker-machine ip`
+IP=localhost
 
 benchmark_do() {
     NAME=$1
@@ -35,12 +35,8 @@ benchmark_do() {
     echo ""
 }
 
-benchmark_do "Express (Node.js)" express
-benchmark_do "Gin (Go)" gin
-benchmark_do "Flask (Python)" flask
-benchmark_do "HTTP (Swift)" http
-benchmark_do "Rails (Ruby)" rails
-benchmark_do "Vapor 2 (Swift)" vapor-2
-benchmark_do "Vapor 3 (Swift)" vapor-3
+benchmark_do "Vapor 4 (Swift)" vapor-4
+benchmark_do "Vapor 4 Musl (Swift)" vapor-4-musl
+benchmark_do "Vapor 4 Musl + mimalloc(Swift)" vapor-4-musl-mimalloc
 
 echo "✅  Done"
